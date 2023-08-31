@@ -8,7 +8,7 @@ public class Calculadora {
         int numero1 = lector.nextInt();
         System.out.println("Ingrese el número 2");
         int numero2 = lector.nextInt();
-        System.out.println("Ingrese la operación (+, -, *, /)");
+        System.out.println("Ingrese la operación (+, -, *, /, %, ^)");
         char operacion = lector.next().charAt(0);
 
         switch (operacion) {
@@ -35,12 +35,12 @@ public class Calculadora {
                 System.out.println("La división es " + division);
             }
             case '%' -> {
-                float porcentaje = (float) (numero1 * numero2) / 100;
-                System.out.println("el porcentaje es" + porcentaje);
+                int modulo = numero1%numero2;
+                System.out.println("el residuo o modulo es " + modulo);
             }
             case '^' -> {
                 int potencia = (int) Math.pow(numero1, numero2);
-                System.out.println("el resultado de la potencia es" + potencia);
+                System.out.println("el resultado de la potencia es " + potencia);
             }
             default -> System.out.println("Operación inválida");
         }
